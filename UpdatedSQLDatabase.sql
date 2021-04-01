@@ -9,10 +9,10 @@ CREATE DATABASE ClassLoginLogout;
 USE ClassLoginLogout;
 
 -- Drop user if exists
-DROP USER IF EXISTS 'timBotUser'@'localhost';
+DROP USER IF EXISTS 'ClassLLUser'@'localhost';
 
 -- Create user
-CREATE USER 'ClassLLuser' IDENTIFIED BY 'Aakjdsg4R0!';
+CREATE USER 'ClassLLUser' IDENTIFIED BY 'Aakjdsg4R0!';
 
 -- Gives user permissions
 GRANT ALL PRIVILEGES ON ClassLLuser.* TO 'ClassLLuser';
@@ -35,7 +35,7 @@ CREATE TABLE LastNames
 );
 
 -- LastNames Table
-CREATE TABLE ClassID
+CREATE TABLE Classes
 (
-    ClassNumbers INTEGER PRIMARY KEY NOT NULL
+    ClassID INTEGER PRIMARY KEY NOT NULL
 );
