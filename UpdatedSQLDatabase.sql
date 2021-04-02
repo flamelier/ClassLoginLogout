@@ -34,7 +34,7 @@ CREATE TABLE LastNames
     AssociatedClassID INTEGER NOT NULL
 );
 
--- LastNames Table
+-- Classes Table
 CREATE TABLE Classes
 (
     ClassID INTEGER PRIMARY KEY NOT NULL
