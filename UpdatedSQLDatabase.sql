@@ -35,7 +35,7 @@ CREATE TABLE UserData
 );
 
 -- Classes Table
-CREATE TABLE ClasseNumbers
+CREATE TABLE ClassNumbers
 (
     ClassID INTEGER PRIMARY KEY NOT NULL
 );
