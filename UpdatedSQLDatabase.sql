@@ -9,13 +9,13 @@ CREATE DATABASE ClassLoginLogout;
 USE ClassLoginLogout;
 
 -- Drop user if exists
-DROP USER IF EXISTS 'ClassLLUser'@'localhost';
+DROP USER IF EXISTS 'ClientUser'@'localhost';
 
 -- Create user
-CREATE USER 'ClassLLUser' IDENTIFIED BY 'Aakjdsg4R0!';
+CREATE USER 'ClientUser' IDENTIFIED BY 'Aakjdsg4R0!';
 
 -- Gives user permissions
-GRANT ALL PRIVILEGES ON ClassLLuser.* TO 'ClassLLuser';
+GRANT ALL PRIVILEGES ON ClientUser.* TO 'ClientUser';
 
 -- LoggedInandLoggedOut Table
 CREATE TABLE LoggedInandLoggedOut
