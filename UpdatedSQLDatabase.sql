@@ -24,7 +24,7 @@ CREATE TABLE LoggedInandLoggedOut
     LastNameID INTEGER NOT NULL,
     TimeID TIME NOT NULL,
     DateID DATE NOT NULL,
-    StatusID INTEGER
+    LoginStatusID INTEGER
 );
 
 -- LastNames Table
