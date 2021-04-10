@@ -31,11 +31,11 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #368138;
+  background-color: #0011fb;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 10px 0px;
-  margin: 35px 10px;
+  margin: 15px 10px;
   border: none;
   cursor: pointer;
   width: 10%;
@@ -43,6 +43,7 @@ button {
 }
 
 button:hover {
+  background-color: #b90000;
   opacity: 0.9;
 }
 
