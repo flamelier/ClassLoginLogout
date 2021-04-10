@@ -41,7 +41,7 @@ CREATE TABLE Logs
     LastNameID TEXT NOT NULL,
     TimeID TIME NOT NULL,
     DateID DATE NOT NULL,
-    LoginStatusID INTEGER
+    LoginStatus TEXT NOT NULL
 );
 GO
 
