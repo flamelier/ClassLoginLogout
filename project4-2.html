@@ -16,12 +16,67 @@
   <h2>VWCC CyberSecurity Lab</h2>
   <br />
   <div class="container">
-   
+    <!--
+    <form action="insert.php" method="POST">
+      <table>
+       <tr>
+        <td><b>Password:</b></td>
+        <td><input type="text" placeholder="Enter Last name" name="LastNameID" required></td>
+       </tr>
+       <tr>
+        <td><b>Class ID:</b></td>
+        <td>
+         <select list="Classes" name="ClassID" id="classes" required>
+          <option selected hidden value="">Select Class</option>
+          <option value="ITP1">ITP1</option>
+          <option value="ITP2">ITP2</option>
+          <option value="ITP3">ITP3</option>
+          <option value="ITP4">ITP4</option>
+          <option value="ITP5">ITP5</option>
+          <option value="ITP6">ITP6</option>
+         </select>
+        </td>
+       </tr>
+       <tr>
+        <td><b>Status:</b></td>
+        <td>
+         <input type="radio" name="gender" value="t" required>Login
+         <input type="radio" name="gender" value="f" required>Logout
+        </td>
+       </tr>
+       <tr>
+        <td><input type="submit" value="Submit"></td>
+       </tr>
+      </table>
+     </form>
+    -->
+     <form action="insert.php" method="POST">
       <label for="uname"><b>Class Number</b></label>
-      <input list="Classes" name="classes" id="classes">
+      <select list="Classes" name="ClassID" id="classes" required>
+        <option selected hidden value="">Select Class</option>
+        <option value="ITP1">ITP1</option>
+        <option value="ITP2">ITP2</option>
+        <option value="ITP3">ITP3</option>
+        <option value="ITP4">ITP4</option>
+        <option value="ITP5">ITP5</option>
+        <option value="ITP6">ITP6</option>
+       </select>
+      <br />
+      <label for="LastNameID"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last name" name="LastNameID" required>
+      <br />
+      <input type="radio" name="gender" value="t" required><b>Login</b>
+      <input type="radio" name="gender" value="f" required><b>Logout</b>
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+
+<!--    <form action="insert.php" method="POST">
+      <label for="uname"><b>Class Number</b></label>
+      <input list="Classes" name="ClassID" id="classes" required>
               
               <datalist id="Classes">
-                
+                  <option selected hidden value="">Select Class</option>
                   <option value="Class 1">
                   <option value="Class 2">
                   <option value="Class 3">
@@ -31,14 +86,13 @@
               </datalist>
                  
          
-      <label for="psw"><b>Last Name</b></label>
+      <label for="LastNameID"><b>Last Name</b></label>
   
-      <input type="password" placeholder="Enter Last name" name="psw" required>
+      <input type="password" placeholder="Enter Last name" name="LastNameID" required>
       <br />
       <button type="submit">Login</button>
-      <div>
-      
-      </div>
+    </form>
+-->
 </center>
   </div>
   </div>
