@@ -15,10 +15,19 @@ DROP USER IF EXISTS 'ClientUser'@'localhost';
 CREATE USER 'ClientUser' IDENTIFIED BY 'Aakjdsg4R0!';
 
 -- Gives user permissions
-GRANT ALL PRIVILEGES ON ClientUser.* TO 'ClientUser';
+GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
+
+-- Drop user if exists
+DROP USER IF EXISTS 'PanelUser'@'localhost';
+
+-- Create user
+CREATE USER 'PanelUser' IDENTIFIED BY 'Aakjdsg4R0!';
+
+-- Gives user permissions
+GRANT ALL PRIVILEGES ON ClassLoginLogout.Logs TO 'PanelUser';
 
 -- LoggedInandLoggedOut Table
-CREATE TABLE LoggedInandLoggedOut
+CREATE TABLE Logs
 (
     ClassID INTEGER PRIMARY KEY NOT NULL,
     LastNameID INTEGER NOT NULL,
@@ -41,10 +50,10 @@ CREATE TABLE ClassNumbers
 );
 
 SELECT *
-FROM LoggedInandLoggedOut, ClassNumbers, UserData
+FROM Logs, ClassNumbers, UserData
 INNER JOIN Classes
-ON LoggedInandLoggedOut.ClassID = ClassNumbers.ClassID
+ON Logs.ClassID = ClassNumbers.ClassID
 INNER JOIN UserData
-ON LoggedInandLoggedOut.LastNameID = UserData.LastnameID
+ON Logs.LastNameID = UserData.LastnameID
 INNER JOIN UserData
-ON LoggedInandLoggedOut.AssociatedClassID = UserData.AssociatedClassID
+ON Logs.AssociatedClassID = UserData.AssociatedClassID
