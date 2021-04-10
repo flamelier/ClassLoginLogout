@@ -37,8 +37,8 @@ GO
 -- LoggedInandLoggedOut Table
 CREATE TABLE Logs
 (
-    ClassID INTEGER PRIMARY KEY NOT NULL,
-    LastNameID INTEGER NOT NULL,
+    ClassID TEXT PRIMARY KEY NOT NULL,
+    LastNameID TEXT NOT NULL,
     TimeID TIME NOT NULL,
     DateID DATE NOT NULL,
     LoginStatusID INTEGER
@@ -48,15 +48,15 @@ GO
 -- LastNames Table
 CREATE TABLE UserData
 (
-    LastnameID INTEGER PRIMARY KEY NOT NULL,
-    AssociatedClassID INTEGER NOT NULL
+    LastnameID TEXT PRIMARY KEY NOT NULL,
+    AssociatedClassID TEXT NOT NULL
 );
 GO
 
 -- Classes Table
 CREATE TABLE ClassNumbers
 (
-    ClassID INTEGER PRIMARY KEY NOT NULL
+    ClassID TEXT PRIMARY KEY NOT NULL
 );
 GO
 
