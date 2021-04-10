@@ -21,7 +21,7 @@ GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
 DROP USER IF EXISTS 'PanelUser'@'localhost';
 
 -- Create user
-CREATE USER 'PanelUser' IDENTIFIED BY 'Aakjdsg4R0!';
+CREATE USER 'PanelUser' IDENTIFIED BY 'Bblketh5S1@';
 
 -- Gives user permissions
 GRANT ALL PRIVILEGES ON ClassLoginLogout.Logs TO 'PanelUser';
