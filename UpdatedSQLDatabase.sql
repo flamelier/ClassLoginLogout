@@ -17,17 +17,6 @@ CREATE USER 'ClientUser' IDENTIFIED BY 'Aakjdsg4R0!';
 -- Gives user permissions
 GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
 
--- Drop user if exists
-DROP USER IF EXISTS 'PanelUser'@'localhost';
-
--- Create user
-CREATE USER 'PanelUser' IDENTIFIED BY 'Bblketh5S1@';
-
--- Gives user permissions
-GRANT INSERT ON ClassLoginLogout.Logs TO 'PanelUser';
-GRANT SELECT ON ClassLoginLout.UserData TO 'PanelUser';
-GRANT SELECT ON ClassLoginLout.ClassNumbers TO 'PanelUser';
-
 -- LoggedInandLoggedOut Table
 CREATE TABLE Logs
 (
@@ -41,7 +30,7 @@ CREATE TABLE Logs
 -- LastNames Table
 CREATE TABLE UserData
 (
-    LastnameID TEXT PRIMARY KEY NOT NULL,
+    LastnameID TEXT PRIMARY KEY NOT NULL
 );
 
 -- Classes Table
@@ -56,3 +45,14 @@ INNER JOIN Classes
 ON Logs.ClassID = ClassNumbers.ClassID
 INNER JOIN UserData
 ON Logs.LastNameID = UserData.LastnameID
+
+-- Drop user if exists
+DROP USER IF EXISTS 'PanelUser'@'localhost';
+
+-- Create user
+CREATE USER 'PanelUser' IDENTIFIED BY 'Bblketh5S1@';
+
+-- Gives user permissions
+GRANT INSERT ON ClassLoginLogout.Logs TO 'PanelUser';
+GRANT SELECT ON ClassLoginLout.UserData TO 'PanelUser';
+GRANT SELECT ON ClassLoginLout.ClassNumbers TO 'PanelUser';
