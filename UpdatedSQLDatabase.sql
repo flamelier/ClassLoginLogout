@@ -18,7 +18,7 @@ CREATE USER 'ClientUser'@'localhost' IDENTIFIED BY 'Aakjdsg4R0!';
 GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
 
 -- LoggedInandLoggedOut Table
-CREATE TABLE Logs
+CREATE TABLE LabLogs
 (
     ClassID TEXT NOT NULL,
     LastNameID TEXT NOT NULL,
