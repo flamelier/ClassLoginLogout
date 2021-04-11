@@ -32,10 +32,12 @@ if (!empty($ClassID) || !empty($LastNameID) || !empty($LoginStatus)) {
       echo "<br />";
       echo "<br />";
       echo "<br />";
-      echo "<h1><center>New status inserted sucessfully. Please wait for redirect or hit back arrow.</center></h1>";
+      echo "<link href=\"static/style/master.css\" rel=\"stylesheet\">";
+      echo "<h1><center>New status inserted sucessfully. Please wait for redirect or click <a href=\"index.php\">here</a>.</center></h1>";
       echo "<meta http-equiv=\"Refresh\" content=\"0; url= index.php\" />";
      } else {
-      echo "You were not found in the CyberSecurity Lab database please let your professor know.";
+      echo "<link href=\"static/style/master.css\" rel=\"stylesheet\">";
+      echo "<h1><center>You were not found in the CyberSecurity Lab database please let your professor know.<br />Please click <a href=\"index.php\">here</a> to go back.</center></php>";
      }
      $stmt->close();
      $conn->close();
