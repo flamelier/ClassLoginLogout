@@ -16,6 +16,7 @@ CREATE USER 'ClientUser'@'localhost' IDENTIFIED BY 'Aakjdsg4R0!';
 
 -- Gives user permissions
 GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
+FLUSH PRIVILEGES;
 
 -- LoggedInandLoggedOut Table
 CREATE TABLE LabLogs
@@ -54,6 +55,7 @@ DROP USER IF EXISTS 'PanelUser'@'localhost';
 CREATE USER 'PanelUser'@'localhost' IDENTIFIED BY 'Bblketh5S1@';
 
 -- Gives user permissions
-GRANT INSERT ON ClassLoginLogout.Logs TO 'PanelUser';
+GRANT INSERT ON ClassLoginLogout.LabLogs TO 'PanelUser';
 GRANT SELECT ON ClassLoginLogout.UserData TO 'PanelUser';
 GRANT SELECT ON ClassLoginLogout.ClassNumbers TO 'PanelUser';
+FLUSH PRIVILEGES;
