@@ -2,8 +2,6 @@
 $ClassID = $_POST['ClassID'];
 $LastNameID = $_POST['LastNameID'];
 $LoginStatus = $_POST['LoginStatus'];
-//$TimeID = (CURDATE());
-//$DateID = (CURTIME());
 
 if (!empty($ClassID) || !empty($LastNameID) || !empty($LoginStatus)) {
     $host = "localhost";
@@ -31,9 +29,13 @@ if (!empty($ClassID) || !empty($LastNameID) || !empty($LoginStatus)) {
       $stmt = $conn->prepare($INSERT);
       $stmt->bind_param("sss", $ClassID, $LastNameID, $LoginStatus);
       $stmt->execute();
-      echo "New status inserted sucessfully";
+      echo "<br />";
+      echo "<br />";
+      echo "<br />";
+      echo "<h1><center>New status inserted sucessfully. Please wait for redirect or hit back arrow.</center></h1>";
+      echo "<meta http-equiv=\"Refresh\" content=\"0; url= index.php\" />";
      } else {
-      echo "There was an error logging you into or out of the CyberSecurity Lab please let your professor know.";
+      echo "You were not found in the CyberSecurity Lab database please let your professor know.";
      }
      $stmt->close();
      $conn->close();
