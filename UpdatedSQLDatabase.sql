@@ -22,9 +22,9 @@ CREATE TABLE Logs
 (
     ClassID TEXT NOT NULL,
     LastNameID TEXT NOT NULL,
+    LoginStatus TEXT NOT NULL,
     TimeID TIME NOT NULL,
-    DateID DATE NOT NULL,
-    LoginStatus TEXT NOT NULL
+    DateID DATE NOT NULL
 );
 
 -- LastNames Table
