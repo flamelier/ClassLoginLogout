@@ -20,7 +20,7 @@ GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
 -- LoggedInandLoggedOut Table
 CREATE TABLE Logs
 (
-    ClassID TEXT PRIMARY KEY NOT NULL,
+    ClassID TEXT NOT NULL,
     LastNameID TEXT NOT NULL,
     TimeID TIME NOT NULL,
     DateID DATE NOT NULL,
@@ -30,13 +30,13 @@ CREATE TABLE Logs
 -- LastNames Table
 CREATE TABLE UserData
 (
-    LastnameID TEXT PRIMARY KEY NOT NULL
+    LastnameID TEXT NOT NULL
 );
 
 -- Classes Table
 CREATE TABLE ClassNumbers
 (
-    ClassID TEXT PRIMARY KEY NOT NULL
+    ClassID TEXT NOT NULL
 );
 
 SELECT *
@@ -44,7 +44,7 @@ FROM Logs, ClassNumbers, UserData
 INNER JOIN Classes
 ON Logs.ClassID = ClassNumbers.ClassID
 INNER JOIN UserData
-ON Logs.LastNameID = UserData.LastnameID
+ON Logs.LastNameID = UserData.LastnameID;
 
 -- Drop user if exists
 DROP USER IF EXISTS 'PanelUser'@'localhost';
