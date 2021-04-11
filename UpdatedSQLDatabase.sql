@@ -12,7 +12,7 @@ USE ClassLoginLogout;
 DROP USER IF EXISTS 'ClientUser'@'localhost';
 
 -- Create user
-CREATE USER 'ClientUser' IDENTIFIED BY 'Aakjdsg4R0!';
+CREATE USER 'ClientUser'@'localhost' IDENTIFIED BY 'Aakjdsg4R0!';
 
 -- Gives user permissions
 GRANT ALL PRIVILEGES ON ClassLoginLogout.* TO 'ClientUser';
@@ -50,7 +50,7 @@ ON Logs.LastNameID = UserData.LastnameID
 DROP USER IF EXISTS 'PanelUser'@'localhost';
 
 -- Create user
-CREATE USER 'PanelUser' IDENTIFIED BY 'Bblketh5S1@';
+CREATE USER 'PanelUser'@'localhost' IDENTIFIED BY 'Bblketh5S1@';
 
 -- Gives user permissions
 GRANT INSERT ON ClassLoginLogout.Logs TO 'PanelUser';
