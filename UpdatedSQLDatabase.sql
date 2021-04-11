@@ -40,12 +40,12 @@ CREATE TABLE ClassNumbers
 );
 
 -- Creates inner joins
-SELECT *
-FROM Logs, ClassNumbers, UserData
-INNER JOIN Classes
-ON Logs.ClassID = ClassNumbers.ClassID
+SELECT LabLogs.ClassID, ClassNumbers.ClassID, UserData.LastNameID, LabLogs.LastnameID
+FROM LabLogs
+INNER JOIN ClassNumbers
+ON ClassNumbers.ClassID = LabLogs.ClassID
 INNER JOIN UserData
-ON Logs.LastNameID = UserData.LastnameID;
+ON UserData.LastNameID = LabLogs.LastnameID;
 
 -- Drop user if exists
 DROP USER IF EXISTS 'PanelUser'@'localhost';
