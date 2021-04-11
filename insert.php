@@ -1,36 +1,37 @@
 <?php
 $ClassID = $_POST['ClassID'];
 $LastNameID = $_POST['LastNameID'];
-$TimeID = (CURDATE());
-$DateID = (CURTIME());
-//$LoginStatusID = $_POST['LoginStatusID'];
+$LoginStatus = $_POST['LoginStatus'];
+//$TimeID = (CURDATE());
+//$DateID = (CURTIME());
 
-if (!empty($username) || !empty($password) || !empty($gender) || !empty($email) || !empty($phoneCode) || !empty($phone)) {
+if (!empty($ClassID) || !empty($LastNameID) || !empty($LoginStatus)) {
     $host = "localhost";
     $dbUsername = "PanelUser";
-    $dbPassword = "Bblketh5S1";
-    $dbName = "Logs";
+    $dbPassword = "Bblketh5S1@";
+    $dbName = "ClassLoginLogout";
     //create connection
-    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
+    $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
     if (mysqli_connect_error()) {
      die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
     } else {
-     $INSERT = "INSERT INTO Logs (ClassID, LastNameID, TimeID, DateID) VALUES (?, ?, ?, ?, ?, ?)";
+     $SELECT = "SELECT LastNameID FROM UserData WHERE LastNameID = ?";
+     $INSERT = "INSERT INTO Logs (ClassID, LastNameID, LoginStatus, TimeID, DateID) VALUES (?, ?, ?, CURTIME(), CURDATE())";
      //Prepare statement
      $stmt = $conn->prepare($SELECT);
-     $stmt->bind_param("s", $email);
+     $stmt->bind_param("s", $LastNameID);
      $stmt->execute();
-     $stmt->bind_result($email);
+     $stmt->bind_result($LastNameID);
      $stmt->store_result();
      $stmt->store_result();
      $stmt->fetch();
      $rnum = $stmt->num_rows;
-     if ($rnum==0) {
+     if ($rnum > 0) {
       $stmt->close();
       $stmt = $conn->prepare($INSERT);
-      $stmt->bind_param("ssssii", $ClassID, $LastNameID, $TimeID, $DateID);
+      $stmt->bind_param("sss", $ClassID, $LastNameID, $LoginStatus);
       $stmt->execute();
-      echo "New record inserted sucessfully";
+      echo "New status inserted sucessfully";
      } else {
       echo "There was an error logging you into or out of the CyberSecurity Lab please let your professor know.";
      }
