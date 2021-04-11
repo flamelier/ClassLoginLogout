@@ -39,6 +39,7 @@ CREATE TABLE ClassNumbers
     ClassID TEXT NOT NULL
 );
 
+-- Creates inner joins
 SELECT *
 FROM Logs, ClassNumbers, UserData
 INNER JOIN Classes
@@ -54,5 +55,5 @@ CREATE USER 'PanelUser'@'localhost' IDENTIFIED BY 'Bblketh5S1@';
 
 -- Gives user permissions
 GRANT INSERT ON ClassLoginLogout.Logs TO 'PanelUser';
-GRANT SELECT ON ClassLoginLout.UserData TO 'PanelUser';
-GRANT SELECT ON ClassLoginLout.ClassNumbers TO 'PanelUser';
+GRANT SELECT ON ClassLoginLogout.UserData TO 'PanelUser';
+GRANT SELECT ON ClassLoginLogout.ClassNumbers TO 'PanelUser';
