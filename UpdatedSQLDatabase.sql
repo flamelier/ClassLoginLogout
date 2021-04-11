@@ -42,7 +42,6 @@ CREATE TABLE Logs
 CREATE TABLE UserData
 (
     LastnameID TEXT PRIMARY KEY NOT NULL,
-    AssociatedClassID TEXT NOT NULL
 );
 
 -- Classes Table
@@ -57,5 +56,3 @@ INNER JOIN Classes
 ON Logs.ClassID = ClassNumbers.ClassID
 INNER JOIN UserData
 ON Logs.LastNameID = UserData.LastnameID
-INNER JOIN UserData
-ON Logs.AssociatedClassID = UserData.AssociatedClassID
