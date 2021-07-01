@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost"; /* Host name */
-$user = "PanelUser"; /* User */
-$password = "Bblketh5S1@"; /* Password */
-$dbname = "ClassLoginLogout"; /* Database name */
+$user = ""; /* User */
+$password = ""; /* Password */
+$dbname = ""; /* Database name */
 
 $con = mysqli_connect($host, $user, $password,$dbname);
 // Check connection
