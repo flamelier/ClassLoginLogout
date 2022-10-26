@@ -1,5 +1,14 @@
 # ClassLoginLogout
 Interface that allows for uses to login to the room with their last name and class number. This information is stored into a MySQL database and designed to run on a Raspberry Pi 4.
+
+## Screenshots & Video
+![image](https://user-images.githubusercontent.com/34852960/198053950-e7b54402-8bd9-4e4e-9ad5-e166cb28c670.png)
+![image](https://user-images.githubusercontent.com/34852960/198053871-3ebd7266-31ce-4abb-81ab-395490e05a04.png)
+![image](https://user-images.githubusercontent.com/34852960/198054001-efa16763-6cc6-42bc-a660-027a979996eb.png)
+![image](https://user-images.githubusercontent.com/34852960/198054039-bb83703c-6a68-43ea-9a5b-f3cad0c8a141.png)
+![image](https://user-images.githubusercontent.com/34852960/198054072-c1478a16-d0e5-4d02-b9b2-72b98c0ce34f.png)
+https://youtu.be/PB-zhB6IfrI
+
 --------------------------------------------------------------------------------
 ## Licensing information.
 
